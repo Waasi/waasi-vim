@@ -1,2 +1,2 @@
 install:
-	cp .vimrc ~/.vimrc
+	cp .vimrc ~/.vimrc && cd ../ && rm -rf waasi-vim
