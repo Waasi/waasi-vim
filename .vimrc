@@ -11,20 +11,18 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-endwise'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'elzr/vim-json'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'scrooloose/syntastic'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ngmy/vim-rubocop'
 Plugin 'roman/golden-ratio'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
