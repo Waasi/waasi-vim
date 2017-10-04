@@ -6,33 +6,39 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'trusktr/seti.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'scrooloose/syntastic'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'roman/golden-ratio'
+Plugin 'neomake/neomake'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'avakhov/vim-yaml'
+Plugin 'roosta/srcery'
+Plugin 'kudabux/vim-srcery-drk'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Welcome message
-echo 'Hello master Waasi (>.<)'
+execute "!figlet Welcome Waasi"
+
+set guifont=Fira_Code:h12
+
+set guifont=Monospace\ 12
+" Linter
+map <C-l> :copen<CR>
+map <C-c> :cclose<CR>
+
+let g:neomake_elixir_enabled_makers = ['credo']
+autocmd! BufWritePost * Neomake
 
 "syntax highlighting
-colorscheme seti
+colorscheme srcery
 syntax on
 set hlsearch
 
@@ -63,8 +69,6 @@ inoremap jk <esc>
 map <C-d> :NERDTreeToggle<CR>
 map <C-e> :FixWhitespace<CR>
 nnoremap cc :call NERDComment(0,"toggle")<CR>
-
-:autocmd BufWritePost *.rb :call RunLastSpec()
 
 let g:vimrubocop_config = '~/.vim/rubocop.yml'
 
